@@ -94,8 +94,10 @@ body {
 }
 
 .btn-primary {
-    background-color: #1a1a1a;
-    color: #ffffff;
+    /*background-color: #1a1a1a;*/
+    /*color: #ffffff;*/
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
 }
 
 .btn-primary:hover {
@@ -104,13 +106,16 @@ body {
 }
 
 .btn-secondary {
-    background-color: #ffffff;
-    color: #333;
-    border: 2px solid #e0e0e0;
+    /*background-color: #ffffff;*/
+    /*color: #333;*/
+    /*border: 2px solid #e0e0e0;*/
+
+    background: #6c757d;
+    color: white;
 }
 
 .btn-secondary:hover {
-    background-color: #f8f8f8;
+    /*background-color: #f8f8f8;*/
     border-color: #ccc;
     transform: translateY(-2px);
 }

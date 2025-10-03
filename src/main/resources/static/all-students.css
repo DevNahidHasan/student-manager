@@ -159,8 +159,11 @@ body {
 }
 
 .btn-primary {
-    background-color: #1a1a1a;
-    color: #ffffff;
+    /*background-color: #1a1a1a;*/
+    /*color: #ffffff;*/
+
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
 }
 
 .btn-primary:hover {
