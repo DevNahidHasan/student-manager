@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student - StudentManager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link th:href="@{add-student.css}" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <a th:href="@{/}" class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Student Manager</span>
+        </a>
+        <nav class="nav">
+            <a th:href="@{/addStudent}" class="nav-link active">Add Student</a>
+            <a th:href="@{/allStudents}" class="nav-link">All Students</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main">
+    <div class="container">
+        <div class="back-link">
+            <a th:href="@{/}" href="" class="back-to-home">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+        </div>
+
+        <div class="page-header">
+            <h1 class="page-title">Add New Student</h1>
+            <p class="page-subtitle">Fill in the details to register a new student.</p>
+        </div>
+
+        <div class="form-container">
+            <div class="form-card">
+                <h2 class="form-section-title">Student Information</h2>
+
+                <form class="student-form" action="/addStudent" method="post" th:object="${student}">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="studentId" class="form-label">Student ID *</label>
+                            <input type="text" id="studentId" th:field="*{studentId}" class="form-input" placeholder="Enter student ID (e.g., xxx-xx-xxxx)" required>
+                            <p th:if="${alreadyExist}" th:class="already-exist" th:text="${message}"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fullName" class="form-label">Full Name *</label>
+                            <input type="text" id="fullName" th:field="*{name}" class="form-input" placeholder="Enter student's full name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" th:field="*{email}" class="form-input" placeholder="Enter email address" required>
+                            <p th:if="${alreadyExist}" th:class="already-exist" th:text="${message}"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age" class="form-label">Age *</label>
+                            <input type="number" id="age" th:field="*{age}" class="form-input" placeholder="Enter age" required>
+                            <p th:if="${#fields.hasErrors('age')}" th:errors="*{age}"  th:class="notValid"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gender" class="form-label">Gender</label>
+                            <select id="gender" th:field="*{gender}" class="form-select">
+                                <option value="">Select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="course" class="form-label">Department *</label>
+                            <select id="course" th:field="*{dept}" class="form-select" required>
+                                <option value="">Select course or major</option>
+                                <option th:each="dpt : ${departments}" th:value="${dpt}" th:text="${dpt}"></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="phone" th:field="*{phoneNumber}" class="form-input" placeholder="Enter phone number (e.g., 01712345678)" pattern="^(?:\+88|88)?(01[3-9]\d{8})$" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="address" class="form-label">Address</label>
+                            <textarea id="address" th:field="*{address}" class="form-textarea" placeholder="Enter complete address" rows="3"></textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Add Student</button>
+                        <button type="button" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

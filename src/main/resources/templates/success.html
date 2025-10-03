@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Added Successfully - StudentManager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="success.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+
+    <div class="container">
+        <a th:href="@{/}" class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Student Manager</span>
+        </a>
+        <nav class="nav">
+            <a th:href="@{/addStudent}" class="nav-link">Add Student</a>
+            <a th:href="@{/allStudents}" class="nav-link">All Students</a>
+        </nav>
+    </div>
+
+</header>
+
+<main class="main">
+    <div class="container">
+        <!-- Success Message Section -->
+        <div class="success-section">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h1 class="success-title">Student Added Successfully!</h1>
+            <p class="success-message" >
+                <span th:text="${student.name}" class="student-name">Student Name</span>
+                has been successfully added to the student database.
+            </p>
+        </div>
+
+        <!-- Action Cards Section -->
+        <div class="actions-section">
+            <div class="actions-grid">
+                <!-- Add Another Student Card -->
+                <div class="action-card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3 class="card-title">Add Another Student</h3>
+                    <p class="card-description">Continue adding students to your database</p>
+                    <a th:href="@{/addStudent}" class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        Add Student
+                    </a>
+                </div>
+
+                <!-- View All Students Card -->
+                <div class="action-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="card-title">View All Students</h3>
+                    <p class="card-description">See the complete student roster</p>
+                    <a th:href="@{/allStudents}" class="btn btn-secondary">
+                        <i class="fas fa-list"></i>
+                        View All Students
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Home Link -->
+        <div class="back-section">
+            <a th:href="@{/}" class="back-to-home">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

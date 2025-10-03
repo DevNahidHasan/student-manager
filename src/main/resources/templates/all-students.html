@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Students - StudentManager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link th:href="@{all-students.css}" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <a th:href="@{/}" class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Student Manager</span>
+        </a>
+        <nav class="nav">
+            <a th:href="@{/addStudent}" class="nav-link">Add Student</a>
+            <a th:href="@{/allStudents}" class="nav-link active">All Students</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main">
+    <div class="container">
+        <div class="back-link">
+            <a th:href="@{/}" class="back-to-home">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+        </div>
+
+        <div class="page-header">
+            <div class="header-content">
+                <div class="title-section">
+                    <h1 class="page-title">All Students</h1>
+                    <p class="page-subtitle">Manage and view your complete student database (<span th:text="${#lists.size(studentList)}">0</span> students)</p>
+                </div>
+                <div class="header-actions">
+                    <a th:href="@{/addStudent}" class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        Add Student
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="students-container">
+            <div class="students-grid">
+                <!-- Dynamic Student Cards -->
+                <div th:each="student : ${studentList}" class="student-card">
+
+                    <div class="student-header">
+                        <!-- Avatar Icon -->
+                        <div class="student-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+
+                        <!-- Name, Age and Gender -->
+                        <div class="student-basic-info">
+                            <h3 class="student-name" th:text="${student.name}">Student Name</h3>
+                            <p class="student-age">Age <span th:text="${student.age}">20</span> • <span th:text="${student.gender}">Gender</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Student ID -->
+                    <div class="student-id">
+                        <span class="id-badge" th:text="${student.studentId}">STU001</span>
+                    </div>
+
+
+                    <div class="student-details">
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <span th:text="${student.email}">student@email.com</span>
+                        </div>
+
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span th:text="${student.phoneNumber}">(555) 123-4567</span>
+                        </div>
+
+                        <div class="detail-item">
+                            <i class="fas fa-book"></i>
+                            <span th:text="${student.dept}">Department</span>
+                        </div>
+
+                        <div class="detail-item" th:if="${student.address != null and !student.address.isEmpty()}">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span th:text="${student.address}">Address</span>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- Empty state when no students -->
+            <div th:if="${#lists.isEmpty(studentList)}" class="empty-state">
+                <div class="empty-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3>No Students Found</h3>
+                <p>Start by adding your first student to the database.</p>
+                <a th:href="@{/addStudent}" class="btn btn-primary">
+                    <i class="fas fa-plus"></i>
+                    Add First Student
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
