@@ -1,9 +1,9 @@
-# Student Manager
+# Student Manager - Using Spring Boot MVC and Thymeleaf
 
 A modern, responsive Spring Boot & Thymeleaf web app for managing student records. Built as a practice project to reinforce my learning of Spring Boot MVC and Thymeleaf.
 
 
-## ✨ Features
+<h2>✨ Features</h2>
 
 - **Add Student:** Register new students with details like ID, name, email, age, gender, department, phone number, and address.
 - **View All Students:** See a dynamic, card-based list of all students with their info.
