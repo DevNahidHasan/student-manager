@@ -1,7 +1,7 @@
 # Student Manager
 
 A modern, responsive Spring Boot & Thymeleaf web app for managing student records. Built as a practice project to reinforce my learning of Spring Boot MVC and Thymeleaf.
----
+
 
 ## ✨ Features
 
@@ -11,7 +11,7 @@ A modern, responsive Spring Boot & Thymeleaf web app for managing student record
 - **Responsive Design:** Works great on desktop and mobile.
 - **Modern UI:** Gradient headers, clean cards, and interactive navigation.
 
----
+
 
 ## 📂 Project Structure
 
@@ -58,7 +58,7 @@ student-manager/
 [//]: # ()
 [//]: # (![Student Manager Homepage]&#40;images/screenshot-homepage.png&#41;)
 
----
+
 
 ## 📸 Screenshots
 
@@ -77,7 +77,7 @@ student-manager/
 > - **Success Page:**  
   ![Success Page](images/screenshot-success.png)
 
----
+
 
 ## 🛠️ Technologies Used
 
@@ -91,7 +91,7 @@ student-manager/
 - **FontAwesome Icons**
 - **CSS**
 
----
+
 
 [//]: # (## 🙏 Acknowledgements)
 
