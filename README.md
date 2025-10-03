@@ -1,12 +1,11 @@
 # Student Manager
 
-A modern, responsive web application for managing student records, built with **Spring Boot** and **Thymeleaf**. This project demonstrates CRUD operations, form validation, and a beautiful UI using custom CSS and FontAwesome icons.
-
+A modern, responsive Spring Boot & Thymeleaf web app for managing student records. Built as a practice project to reinforce my learning of Spring Boot MVC and Thymeleaf.
 ---
 
 ## ✨ Features
 
-- **Add Student:** Register new students with details like ID, name, email, age, gender, department, phone, and address.
+- **Add Student:** Register new students with details like ID, name, email, age, gender, department, phone number, and address.
 - **View All Students:** See a dynamic, card-based list of all students with their info.
 - **Success Page:** After adding a student, see a confirmation with next-step actions.
 - **Responsive Design:** Works great on desktop and mobile.
@@ -33,58 +32,73 @@ student-manager/
 └── README.md
 ```
 
----
+[//]: # (---)
 
-## 🖼️ Adding Images to the README
+[//]: # ()
+[//]: # (## 🖼️ Adding Images to the README)
 
-To add images (e.g., screenshots) to your README:
+[//]: # ()
+[//]: # (To add images &#40;e.g., screenshots&#41; to your README:)
 
-1. Place your image in the repository (e.g., in a folder called `images/`).
-2. Reference it in markdown like this:
+[//]: # ()
+[//]: # (1. Place your image in the repository &#40;e.g., in a folder called `images/`&#41;.)
 
-```markdown
-![Screenshot](images/screenshot-homepage.png)
-```
+[//]: # (2. Reference it in markdown like this:)
 
-**Example:**
+[//]: # ()
+[//]: # (```markdown)
 
-![Student Manager Homepage](images/screenshot-homepage.png)
+[//]: # (![Screenshot]&#40;images/screenshot-homepage.png&#41;)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (**Example:**)
+
+[//]: # ()
+[//]: # (![Student Manager Homepage]&#40;images/screenshot-homepage.png&#41;)
 
 ---
 
 ## 📸 Screenshots
 
-> *(Add your own screenshots here!)*
+[//]: # (> *&#40;Add your own screenshots here!&#41;*)
+> *(Will add screenshots soon...)*
 
-- **Homepage:**  
+> - **Homepage:**  
   ![Homepage](images/screenshot-homepage.png)
 
-- **Add Student:**  
+> - **Add Student:**  
   ![Add Student](images/screenshot-add-student.png)
 
-- **All Students:**  
+> - **All Students:**  
   ![All Students](images/screenshot-all-students.png)
 
-- **Success Page:**  
+> - **Success Page:**  
   ![Success Page](images/screenshot-success.png)
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **Java 17+**
-- **Spring Boot**
+- **Java 21**
+- **Spring Boot MVC**
+- **Spring Data JPA**
+- **PostgreSQL**
 - **Thymeleaf**
 - **Lombok**
 - **Gradle**
-- **FontAwesome**
-- **Custom CSS**
+- **FontAwesome Icons**
+- **CSS**
 
 ---
 
-## 🙏 Acknowledgements
+[//]: # (## 🙏 Acknowledgements)
 
-- Inspired by modern web dashboards and admin panels.
-- Thanks to [FontAwesome](https://fontawesome.com/) for the icons.
+[//]: # ()
+[//]: # (- Inspired by modern web dashboards and admin panels.)
 
----
+[//]: # (- Thanks to [FontAwesome]&#40;https://fontawesome.com/&#41; for the icons.)
+
+[//]: # ()
+[//]: # (---)
