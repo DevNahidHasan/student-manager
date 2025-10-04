@@ -37,7 +37,7 @@ student-manager/
 ## 📸 Screenshots
 
 
-> *(Will add screenshots soon...)*
+[//]: # (> *&#40;Will add screenshots soon...&#41;*)
 
 > - **Homepage:**  
   ![Homepage](images/homepage.png)
