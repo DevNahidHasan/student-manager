@@ -32,52 +32,26 @@ student-manager/
 └── README.md
 ```
 
-[//]: # (---)
-
-[//]: # ()
-[//]: # (## 🖼️ Adding Images to the README)
-
-[//]: # ()
-[//]: # (To add images &#40;e.g., screenshots&#41; to your README:)
-
-[//]: # ()
-[//]: # (1. Place your image in the repository &#40;e.g., in a folder called `images/`&#41;.)
-
-[//]: # (2. Reference it in markdown like this:)
-
-[//]: # ()
-[//]: # (```markdown)
-
-[//]: # (![Screenshot]&#40;images/screenshot-homepage.png&#41;)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (**Example:**)
-
-[//]: # ()
-[//]: # (![Student Manager Homepage]&#40;images/screenshot-homepage.png&#41;)
-
 
 
 ## 📸 Screenshots
 
-[//]: # (> *&#40;Add your own screenshots here!&#41;*)
+
 > *(Will add screenshots soon...)*
 
 > - **Homepage:**  
   ![Homepage](images/homepage.png)
 
-> - **Add Student:**  
-  ![Add Student](images/screenshot-add-student.png)
-
-> - **All Students:**  
-  ![All Students](images/screenshot-all-students.png)
+> - **Add Student Page:**  
+  ![Add Student](images/add-student-page-withInfo.png)
 
 > - **Success Page:**  
-  ![Success Page](images/screenshot-success.png)
+    ![Success Page](images/success-page.png)
 
+> - **All Students Page:**  
+  ![All Students](images/all-students-page.png)
 
+    
 
 ## 🛠️ Technologies Used
 
@@ -88,17 +62,9 @@ student-manager/
 - **Thymeleaf**
 - **Lombok**
 - **Gradle**
-- **FontAwesome Icons**
+- **HTML**
 - **CSS**
+- **FontAwesome Icons**
 
 
 
-[//]: # (## 🙏 Acknowledgements)
-
-[//]: # ()
-[//]: # (- Inspired by modern web dashboards and admin panels.)
-
-[//]: # (- Thanks to [FontAwesome]&#40;https://fontawesome.com/&#41; for the icons.)
-
-[//]: # ()
-[//]: # (---)
