@@ -1,6 +1,7 @@
 package com.nahid.studentmanager.service;
 
 import com.nahid.studentmanager.model.Student;
+import com.nahid.studentmanager.repo.StudentRepo;
 import lombok.Data;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -16,6 +17,7 @@ import java.util.List;
 public class StudentService {
 
     private final List<Student> studentList = new ArrayList<>();
+    private final StudentRepo studentRepo;
 
     @PostConstruct
     public void init() {
@@ -56,6 +58,8 @@ public class StudentService {
             "01745678901",
             "789 Academic Dr, Study Hall, ST 13579"
         ));
+
+        studentRepo.saveAll(studentList);
     }
 
     public boolean alreadyExist(Student student){
@@ -72,10 +76,6 @@ public class StudentService {
     public void addStudent(Student student){
         studentList.add(student);
         System.out.println("Student Saved to Database successfully.");
-    }
-
-    public List<Student> getStudentList(){
-        return studentList;
     }
 
 }

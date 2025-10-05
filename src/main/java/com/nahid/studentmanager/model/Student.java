@@ -1,5 +1,7 @@
 package com.nahid.studentmanager.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,15 +14,17 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 @ToString
+@Entity
 public class Student {
 
-    @NotBlank(message = "Student ID is required")
+    @Id
+//    @NotBlank(message = "Student ID is required")
     private String studentId;
 
-    @NotBlank(message = "Name is required")
+//    @NotBlank(message = "Name is required")
     private String name;
 
-    @Email(message = "Invalid email format")
+//    @Email(message = "Invalid email format")
     private String email;
 
     @Min(value = 18, message = "Age must be at least 18")
@@ -35,10 +39,10 @@ public class Student {
 //    @NotBlank(message = "Country must be selected")
 //    private String country;
 
-    @NotBlank(message = "Must select major.")
+//    @NotBlank(message = "Must select major.")
     private String dept;
 
-    @NotBlank(message = "Must provide a valid Bangladeshi Number.")
+//    @NotBlank(message = "Must provide a valid Bangladeshi Number.")
     private String phoneNumber;
 
 //    @AssertTrue(message = "You must agree to the terms")
