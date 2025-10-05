@@ -64,18 +64,28 @@ public class StudentService {
 
     public boolean alreadyExist(Student student){
 
-        for(Student s : studentList){
-            if(s.getStudentId().equals(student.getStudentId()) || s.getEmail().equals(student.getEmail())){
-                return true;
-            }
+//        for(Student s : studentList){
+//            if(s.getStudentId().equals(student.getStudentId()) || s.getEmail().equals(student.getEmail())){
+//                return true;
+//            }
+//        }
+        String sId = student.getStudentId();
+        String email = student.getEmail();
+        if(studentRepo.existsById(sId) || studentRepo.existsByEmail(email)){
+            return true;
         }
 
         return false;
     }
 
     public void addStudent(Student student){
-        studentList.add(student);
+//        studentList.add(student);
+        studentRepo.save(student);
         System.out.println("Student Saved to Database successfully.");
+    }
+
+    public List<Student> getAllStudents(){
+        return studentRepo.findAll();
     }
 
 }

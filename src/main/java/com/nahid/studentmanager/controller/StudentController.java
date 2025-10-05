@@ -70,7 +70,7 @@ public class StudentController {
 
     @GetMapping("/allStudents")
     public String showAllStudents(Model model){
-        model.addAttribute("studentList",studentService.getStudentList());
+        model.addAttribute("studentList",studentService.getAllStudents());
         return "all-students";
 
     }
